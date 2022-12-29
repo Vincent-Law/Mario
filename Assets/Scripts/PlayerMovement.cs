@@ -147,13 +147,25 @@ public class PlayerMovement : MonoBehaviour
     //this is made by unity and will call somthing when mario has made a collision
     //we are making this so that his velocty resets when his head hits something
     //there are different things mario can hit his head on and we need to seperate what happens for each
+
+    //after making goomba script we need to update this to be able to bounce off goomba after killing
+    //this will work on any enemy
+    //this changes power up if to else if
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-
-
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            //if mario collides with an enemy from above
+            if (transform.DotTest(collision.transform, Vector2.down))
+            {
+                velocity.y = jumpForce / 2f;
+                //tell the game we are airborne
+                jumping = true;
+            }
+        }
         //this is a check case to see if mario is hitting a power upfreom undernieth where we dont want him to lose velocity
-        if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        else if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
         {
             //we are going to use dot product to determine how to handle powerups from above
            // velocity.y = 0f;
