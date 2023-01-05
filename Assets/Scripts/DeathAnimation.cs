@@ -86,7 +86,7 @@ public class DeathAnimation : MonoBehaviour
         {//everyframe of the death animation we are in this while loop until elapsed has met duration
             //changing posistion over time
             transform.position += velocity * Time.deltaTime;
-            velocity.y += gravity *Time.deltaTime;
+            velocity.y += gravity * Time.deltaTime;
 
             elapsed += Time.deltaTime;
             

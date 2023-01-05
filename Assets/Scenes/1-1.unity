@@ -11297,7 +11297,8 @@ PrefabInstance:
       propertyPath: slide
       value: 
       objectReference: {fileID: 21300000, guid: 98014fa15d2f2f84495aa2512e65cfba, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d83a5e7863a8afc4faee91819fff1fa7, type: 3}
 --- !u!1001 &1133934268289006762
 PrefabInstance:
@@ -11497,13 +11498,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1563000263}
     m_Modifications:
+    - target: {fileID: 3611261760737888592, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 38956f95f8c87eb4b8178216d7a72c1b, type: 2}
     - target: {fileID: 3611261760737888593, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3611261760737888593, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3611261760737888593, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11541,6 +11546,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3611261760737888595, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 38956f95f8c87eb4b8178216d7a72c1b, type: 2}
     - target: {fileID: 3611261760737888598, guid: 0724cbeea21c46642b57c4ace196dea7, type: 3}
       propertyPath: m_Name
       value: Koopa

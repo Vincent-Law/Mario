@@ -35,6 +35,8 @@ public class PlayerSpriteRenderer : MonoBehaviour
     private void OnDisable()
     {
         spriteRenderer.enabled = false;
+        //this fixes issue when player died he would still do his run animation in his death animation
+        run.enabled = false;
     }
 
     private void LateUpdate()
