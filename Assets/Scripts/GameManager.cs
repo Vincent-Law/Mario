@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int stage { get; private set; }
 
     public int lives { get; private set; }
-
+    public int coins { get; private set; }
 
 
     private void Awake()
@@ -59,7 +59,8 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         lives = 3;
-
+        //reset coins
+        coins = 0;
         LoadLevel(1, 1);
     }
 
@@ -111,5 +112,27 @@ public class GameManager : MonoBehaviour
         // if we wanted to wait for 3 seconds to start new game "Invoke(nameof(NewGame), 3f);"
     }
        
+    //logic for coins being gathered, needs to be public so blockcoin canc all
+    public void AddCoin()
+    {
+        coins++;
+
+
+        //need life goin on 100 coins
+        if (coins == 100)
+        {
+            AddLife();
+            coins = 0;
+        }
+    }
+
+    //logic for adding another life ie. 100 coins and 1up mushroom
+    public void AddLife()
+    {
+        lives++;
+
+    }
+
+
 
 }

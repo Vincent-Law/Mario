@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841438207429839043}
   - component: {fileID: 841438207429839044}
+  - component: {fileID: 884213779533362265}
   m_Layer: 6
   m_Name: BlockCoin
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &884213779533362265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841438207429839045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c97dcdfe6b1214e84108be9345b2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
