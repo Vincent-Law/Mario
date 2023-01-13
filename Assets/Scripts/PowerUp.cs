@@ -34,14 +34,14 @@ public class PowerUp : MonoBehaviour
     }
 
 
-    //we also want to pass a reference to the player so we can make the accoring changes to mario
+    //we also want to pass a reference to the player(game object Not Script) so we can make the accoring changes to mario
     //collect will look at mario and run the according Enum
     private void Collect(GameObject player)
     {
         switch (type)
         {
             case Type.Coin:
-                //this is looking at current Instance of game manager and running AddCoin
+                //this is looking at current Instance of game manager and running AddCoin*
                 GameManager.Instance.AddCoin();
                 
                 break;
@@ -49,8 +49,9 @@ public class PowerUp : MonoBehaviour
                 GameManager.Instance.AddLife();
                 break;
             case Type.MagicMuchroom:
-
-                //todo
+                //we are getting the player script and calling the grow function on it
+                player.GetComponent<Player>().Grow();
+                
                 break;
             case Type.StarPower:
 
