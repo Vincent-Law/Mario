@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
     //start is a unity funcition, ran first frame game manager is enabled
     private void Start()
     {
+        //we can set the game framerate here
+        Application.targetFrameRate = 60;
         NewGame();
     }
 

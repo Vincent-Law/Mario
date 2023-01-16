@@ -7,7 +7,9 @@ public class PlayerSpriteRenderer : MonoBehaviour
 {
     //this is going to handle changing mario from big to small
 
-    private SpriteRenderer spriteRenderer;
+    //we need to make spriteRenderer from private to public so we can do our star power animation
+    // we are making a public get and private setter
+    public SpriteRenderer spriteRenderer { get; private set; }
 
     private PlayerMovement movement;
 

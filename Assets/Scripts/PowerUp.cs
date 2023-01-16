@@ -54,8 +54,8 @@ public class PowerUp : MonoBehaviour
                 
                 break;
             case Type.StarPower:
-
-                //todo
+                //this will be setting a state change, adding an animation
+                player.GetComponent<Player>().Starpower();
                 break;
 
         }
@@ -63,7 +63,7 @@ public class PowerUp : MonoBehaviour
         Destroy(gameObject);
     }
 
-
+    
 
 
 }

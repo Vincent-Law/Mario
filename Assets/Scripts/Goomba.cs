@@ -16,9 +16,16 @@ public class Goomba : MonoBehaviour
         {
             //reference to player class, saf
             Player player = collision.gameObject.GetComponent<Player>();
+
+            //logic for starpower, instead of calling player.hit we calla goomba hit
+            if (player.starpower)
+            {
+                Hit();
+            }
+
             //going to preform a dot test for the direction that the player hit the goomba is going down
             //implying it landed on his head
-            if (collision.transform.DotTest(transform, Vector2.down))
+            else if (collision.transform.DotTest(transform, Vector2.down))
             {
                 Flatten();
             }//otherwise if mario collides with goomba not from above

@@ -26,9 +26,14 @@ public class Koopa : MonoBehaviour
         {
             //reference to player class, saf
             Player player = collision.gameObject.GetComponent<Player>();
+
+            if (player.starpower)
+            {
+                Hit();
+            }
             //going to preform a dot test for the direction that the player hit the goomba is going down
             //implying it landed on his head
-            if (collision.transform.DotTest(transform, Vector2.down))
+            else if (collision.transform.DotTest(transform, Vector2.down))
             {
                 EnterShell();
             }//otherwise if mario collides with goomba not from above
@@ -56,7 +61,15 @@ public class Koopa : MonoBehaviour
             else
             {
                 Player player = other.GetComponent<Player>();
-                player.Hit();
+                //we need to check to see if in start power to not get hit by shell
+                if (player.starpower)
+                {
+                    Hit();
+                }
+                else
+                {
+                    player.Hit();
+                }
             }
         }
         //coipied from goomba with an added condition of not curently being shelled
