@@ -29,6 +29,8 @@ public class SideScrolling : MonoBehaviour
     {
         // set underground height offset
         Vector3 cameraPosition = transform.position;
+        //this is a turn statement, like a if else statement
+        //condition underground true// : is the else
         cameraPosition.y = underground ? undergroundHeight : height;
         transform.position = cameraPosition;
     }

@@ -10589,6 +10589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1078669067}
     m_Modifications:
+    - target: {fileID: 1868237887828344543, guid: 65b70367d97a6a041b6b5110249c2668, type: 3}
+      propertyPath: connection
+      value: 
+      objectReference: {fileID: 1374034425}
     - target: {fileID: 5674727796144505232, guid: 65b70367d97a6a041b6b5110249c2668, type: 3}
       propertyPath: connection
       value: 
@@ -11571,6 +11575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1642772125}
     m_Modifications:
+    - target: {fileID: 2138104922164310944, guid: ed187b71a97bea840801d7d397bb47b7, type: 3}
+      propertyPath: connection
+      value: 
+      objectReference: {fileID: 1655158057}
     - target: {fileID: 2977163765703510788, guid: ed187b71a97bea840801d7d397bb47b7, type: 3}
       propertyPath: m_Name
       value: PipeConnection

@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2977163765703510791}
   - component: {fileID: 1364223340861769599}
+  - component: {fileID: 2138104922164310944}
   m_Layer: 2
   m_Name: PipeConnection
   m_TagString: Untagged
@@ -171,6 +172,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &2138104922164310944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977163765703510788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bcea3e2fe3958459c807d843cb696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connection: {fileID: 0}
+  enterKeyCode: 100
+  enterDirection: {x: 1, y: 0, z: 0}
+  exitDirection: {x: 0, y: 1, z: 0}
 --- !u!1 &6798103478261357143
 GameObject:
   m_ObjectHideFlags: 0
