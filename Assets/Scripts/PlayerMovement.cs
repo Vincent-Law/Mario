@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private new Camera camera;
     private new Rigidbody2D rigidbody;
+
+
+    //this is a refference for the collider that we need for when mario is enabled and disabled
     private new Collider2D collider;
 
     private Vector2 velocity;
@@ -32,11 +35,28 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         camera = Camera.main;
+        collider= GetComponent<Collider2D>();
         rigidbody = GetComponent<Rigidbody2D>();
         
     }
 
- 
+    private void OnEnable()
+    {
+        rigidbody.isKinematic = false;
+        collider.enabled = true;
+        velocity = Vector2.zero;
+        jumping = false;
+    }
+
+    //code to clear out velocity when mario is disabled
+    private void OnDisable()
+    {
+        rigidbody.isKinematic = true;
+        collider.enabled = false;
+        velocity = Vector2.zero;
+        jumping= false;
+    }
+
     private void Update()
     {
         HorizontalMovement();
